@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationBarView" customModule="iOSTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-z6-ZcH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1X-4F-sl1">
+                    <rect key="frame" x="16" y="24" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="qNM-eJ-EJT"/>
+                        <constraint firstAttribute="height" constant="46" id="wKU-eO-0Mo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" image="chevron.left" catalog="system"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-NZ-jAW">
+                    <rect key="frame" x="352" y="24" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="5lU-eu-TcQ"/>
+                        <constraint firstAttribute="width" constant="46" id="7om-Us-WEp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" image="star" catalog="system"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shs-RT-S5O">
+                    <rect key="frame" x="290" y="24" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="dhq-GF-dWI"/>
+                        <constraint firstAttribute="width" constant="46" id="e6B-0f-oe1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="V1X-4F-sl1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1An-hx-os9"/>
+                <constraint firstItem="V1X-4F-sl1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="2VZ-CF-pue"/>
+                <constraint firstItem="bs9-z6-ZcH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="6V6-xz-sIK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bs9-z6-ZcH" secondAttribute="trailing" id="DTz-48-4Sy"/>
+                <constraint firstItem="pBf-NZ-jAW" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="ECI-MA-UKd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="bs9-z6-ZcH" secondAttribute="top" id="EwP-Q7-jS5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pBf-NZ-jAW" secondAttribute="trailing" constant="16" id="Vtm-og-34d"/>
+                <constraint firstItem="pBf-NZ-jAW" firstAttribute="leading" secondItem="shs-RT-S5O" secondAttribute="trailing" constant="16" id="kgS-02-2tt"/>
+                <constraint firstItem="shs-RT-S5O" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="qXU-QC-USd"/>
+                <constraint firstItem="bs9-z6-ZcH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xRR-Bn-k3x"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backBtn" destination="V1X-4F-sl1" id="80P-ea-8xg"/>
+                <outlet property="shareBtn" destination="shs-RT-S5O" id="7vg-Mc-nvX"/>
+                <outlet property="starBtn" destination="pBf-NZ-jAW" id="1pf-r5-Vpi"/>
+                <outlet property="view" destination="bs9-z6-ZcH" id="Fmg-rX-IWC"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="-254.57271364317842"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
